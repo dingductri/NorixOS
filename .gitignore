@@ -1,0 +1,8 @@
+build/
+.mkosi-cache/
+OVMF_VARS.fd
+*.raw
+*.qcow2
+*.img
+*.iso
+*.log
