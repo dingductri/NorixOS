@@ -1,16 +1,14 @@
 #!/bin/sh
 set -e
 
-# syslink os-release
 rm -f "${BUILDROOT}/etc/os-release"
 mkdir -p "${BUILDROOT}/etc"
 ln -s ../usr/lib/os-release "${BUILDROOT}/etc/os-release"
-# grub
-cat >/etc/default/grub <<EOF
+
+
+mkdir -p "${BUILDROOT}/etc/default"
+cat >"${BUILDROOT}/etc/default/grub" <<EOF
 GRUB_DEFAULT=0
 GRUB_TIMEOUT=5
 GRUB_TIMEOUT_STYLE=menu
 EOF
-
-update-grub
-###
