@@ -13,6 +13,4 @@ GRUB_TIMEOUT=5
 GRUB_TIMEOUT_STYLE=menu
 EOF
 
-# First Boot Disable
-systemctl disable systemd-firstboot.service 2>/dev/null || true
-rm -f "${BUILDROOT}/etc/systemd/system/sysinit.target.wants/systemd-firstboot.service"
+
